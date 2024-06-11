@@ -22,15 +22,37 @@ body {
     margin: 0 auto;
 }
 
+.default {
+    padding: 8rem 0;
+}
+
+.default h2 {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.default h3 {
+    font-size: 3rem;
+    line-height: 3.2rem;
+    font-weight: 700;
+}
+
 .btn {
     position: relative;
+    z-index: 1;
     display: inline-block;
-    padding: 1.5rem 3.2rem;
+    padding: 1.7rem 3.2rem;
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
     font-size: 1.6rem;
     border-radius: 2.4rem;
+    height: 5.6rem;
     overflow: hidden;
+}
+
+.btn:hover {
+    color: var(--white-color);
+    transition: 0.4s;
 }
 
 .btn::before {
@@ -45,6 +67,17 @@ body {
     transition: 0.4s;
 }
 
+.btn::after {
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: url(../images/btn_arrow_c.svg) no-repeat center center/contain;
+    vertical-align: middle;
+    margin: 0 0 0 12px;
+    transform: rotate(15deg);
+}
+
 .btn:hover::before {
     top: auto;
     bottom: 0;
@@ -54,6 +87,14 @@ body {
 .btn.ws {
     border: 2px solid var(--white-color);
     color: var(--white-color);
+}
+
+.btn.ws::after {
+    background: url(../images/btn_arrow.svg) no-repeat center center/contain;
+}
+
+.btn:hover::after {
+    background: url(../images/btn_arrow.svg) no-repeat center center/contain;
 }
 
 .scroll {

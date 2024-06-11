@@ -18,5 +18,16 @@ $(function () {
             delay: 2500,
             disableOnInteraction: false,
         },
+
+        navigation: {
+            nextEl: '#mainVisual .arrows .next',
+            prevEl: '#mainVisual .arrows .prev',
+        },
+
+    });
+
+    const mainCustomerSlide = new Swiper('.main_customer_slide', {
+        slidesPerView: 2.5,
+        spaceBetween: 30,
     });
 })
