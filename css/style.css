@@ -241,11 +241,25 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    z-index: 999;
+    z-index: 2;
     color: var(--white-color);
     transform: translate(-50%, 0);
 }
 
+#mainVisual .circle_btn {
+    position: absolute;
+    bottom: 0rem;
+    right: 23rem;
+    z-index: 2;
+
+    transform: translate(0, 50%);
+    background: var(--primary-color);
+}
+
+
+#mainVisual .circle_btn::before {
+    background: var(--primary-color);
+}
 
 
 #mainInfo {}
@@ -584,6 +598,22 @@
 
 #footer .fb {
     color: var(--white-color);
+}
+
+#footer .fb .inner {
+    position: relative;
+}
+
+#footer .fb .circle_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--scondary-color);
+    transform: translate(0, -50%);
+}
+
+#footer .fb .circle_btn::before {
+    background: var(--scondary-color);
 }
 
 #footer .fb .ft_info {

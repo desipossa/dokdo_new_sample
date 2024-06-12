@@ -1,5 +1,6 @@
 :root {
     --primary-color: #09847f;
+    --scondary-color: #b4613d;
     --white-color: #ffffff;
     --body-color: #333333;
     --background-color: #f8f8f8;
@@ -149,11 +150,9 @@ body {
     }
 }
 
-.circle {
-    position: absolute;
-    bottom: 0rem;
-    right: 23rem;
-    z-index: 999;
+.circle_btn {
+
+    position: relative;
 
     display: flex;
     flex-direction: column;
@@ -163,27 +162,23 @@ body {
     width: 18rem;
     height: 18rem;
 
-    transform: translate(0, 50%);
-
     border-radius: 50%;
 
-    background: var(--primary-color);
 }
 
-.circle img {
+.circle_btn img {
     height: 3.2rem;
 }
 
-.circle::before {
+.circle_btn::before {
     content: "";
     position: absolute;
     inset: 0 0 0 0;
-    background: var(--primary-color);
     border-radius: 50%;
     opacity: 0;
 }
 
-.circle:hover::before {
+.circle_btn:hover::before {
     animation: circle 1s infinite;
 }
 
@@ -199,7 +194,7 @@ body {
     }
 }
 
-.circle strong {
+.circle_btn strong {
     margin: 1.6rem 0 0 0;
     color: var(--white-color);
     text-align: center;
