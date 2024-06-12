@@ -395,7 +395,8 @@
 }
 
 #mainCustomer .inner_w .tit_area {
-    flex: 0 1 40rem;
+    flex: 0 1 50rem;
+    padding: 3.2rem 0 0 0;
 }
 
 #mainCustomer .inner_w .tit_area p {
@@ -409,13 +410,27 @@
 }
 
 #mainCustomer .inner_w .slide_area {
+    position: relative;
     flex: 1;
-    overflow: hidden;
+    /* overflow: hidden; */
+    min-width: 0;
+}
+
+#mainCustomer .inner_w .slide_area::before {
+    content: "";
+    position: absolute;
+    top: -8rem;
+    left: -8rem;
+    width: 12rem;
+    height: 12rem;
+    border: 6rem solid var(--primary-color);
+    border-radius: 50%;
+    box-sizing: content-box;
 }
 
 #mainCustomer .inner_w .slide_area .itm {
     background: var(--background-color);
-    padding: 2.4rem;
+    padding: 3.2rem 3.2rem 6.4rem 3.2rem;
 
     border-radius: 2.4rem;
 }
@@ -430,6 +445,25 @@
     width: 100%;
     height: 24rem;
     object-fit: cover;
+}
+
+#mainCustomer .inner_w .slide_area .itm .cate {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 1.6rem;
+    margin: 0 0 1.6rem 0;
+}
+
+#mainCustomer .inner_w .slide_area .itm strong {
+    display: block;
+    margin: 0 0 1.6rem 0;
+    font-weight: 700;
+    font-size: 2.0rem;
+    line-height: 2.4rem;
 }
 
 #mainCustomer h2 {

@@ -29,5 +29,28 @@ $(function () {
     const mainCustomerSlide = new Swiper('.main_customer_slide', {
         slidesPerView: 2.5,
         spaceBetween: 30,
+        loop: true,
+        navigation: {
+            nextEl: '#mainCustomer .arrows .next',
+            prevEl: '#mainCustomer .arrows .prev',
+        },
     });
+
+
+    const lenis = new Lenis()
+
+    // lenis.on('scroll', (e) => {
+    //     console.log(e)
+    // })
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf);
+
+
+    AOS.init();
+
 })
