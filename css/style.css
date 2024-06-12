@@ -246,63 +246,7 @@
     transform: translate(-50%, 0);
 }
 
-#mainVisual .circle {
-    position: absolute;
-    bottom: 0rem;
-    right: 23rem;
-    z-index: 999;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    width: 18rem;
-    height: 18rem;
-
-    transform: translate(0, 50%);
-
-    border-radius: 50%;
-
-    background: var(--primary-color);
-}
-
-#mainVisual .circle img {
-    height: 3.2rem;
-}
-
-#mainVisual .circle::before {
-    content: "";
-    position: absolute;
-    inset: 0 0 0 0;
-    background: var(--primary-color);
-    border-radius: 50%;
-    opacity: 0;
-}
-
-#mainVisual .circle:hover::before {
-    animation: circle 1s infinite;
-}
-
-@keyframes circle {
-    0% {
-        opacity: 0.5;
-        transform: scale(1);
-    }
-
-    100% {
-        opacity: 0;
-        transform: scale(1.3);
-    }
-}
-
-#mainVisual .circle strong {
-    margin: 1.6rem 0 0 0;
-    color: var(--white-color);
-    text-align: center;
-    font-size: 1.8rem;
-    line-height: 2.4rem;
-}
 
 #mainInfo {}
 
@@ -468,4 +412,224 @@
 
 #mainCustomer h2 {
     margin: 0 0 4rem 0;
+}
+
+#mainBanner {
+    padding: 0 0;
+}
+
+#mainBanner .inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    background: var(--primary-color);
+    border-radius: 4rem;
+
+    margin: 0 auto -8rem auto;
+}
+
+#mainBanner .inner>* {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 6.4rem;
+}
+
+#mainBanner .inner>*~*::before {
+    content: "";
+    position: absolute;
+    top: 2.4rem;
+    bottom: 2.4rem;
+    left: 50%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+#mainBanner .inner>* img {
+    height: 8rem;
+}
+
+#mainBanner .inner>* h3 {
+    color: var(--white-color);
+    margin: 0 0 2.4rem 0;
+}
+
+#mainBanner .inner>* p {
+    font-size: 1.6rem;
+    color: var(--white-color);
+}
+
+#footer {
+    position: relative;
+    padding: 0 0 8rem 0;
+    background: #3a3846 url(../images/bg_banner.jpg) no-repeat center top/100% auto;
+    border-radius: 20rem 0 0 0;
+}
+
+#footer .ft {
+    min-height: 68rem;
+}
+
+#footer .add {
+    position: absolute;
+    top: 20rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+}
+
+#footer .add img {
+    height: 8.8rem;
+    margin: 0 0 2.4rem 0;
+}
+
+#footer .add .txt {
+    position: relative;
+    font-family: "Noto Serif KR", serif;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+#footer .add .txt::after {
+    content: attr(data-txt);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    color: var(--white-color);
+    border-right: 1px solid var(--white-color);
+
+    animation: txt 4s infinite steps(20);
+}
+
+@keyframes txt {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+#footer .dots {
+    color: var(--white-color);
+    font-family: "Noto Serif KR", serif;
+}
+
+#footer .dots>*::before {
+    content: "";
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 4px;
+    height: 4px;
+    background: var(--white-color);
+    border-radius: 50%;
+}
+
+#footer .dots>*::after {
+    content: "";
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 4px;
+    height: 4px;
+    background: var(--white-color);
+    border-radius: 50%;
+    opacity: 0.25;
+
+    animation: dots 4s infinite;
+}
+
+
+@keyframes dots {
+    0% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, 0) scale(5);
+    }
+
+    100% {
+        transform: translate(-50%, 0);
+    }
+}
+
+#footer .west {
+    position: absolute;
+    top: 16vw;
+    left: 32vw;
+}
+
+#footer .east {
+    position: absolute;
+    top: 22vw;
+    right: 38vw;
+}
+
+#footer .fb {
+    color: var(--white-color);
+}
+
+#footer .fb .ft_info {
+    display: flex;
+    gap: 4rem;
+    margin: 0 0 1.6rem 0;
+}
+
+#footer .fb .ft_info li {
+    position: relative;
+}
+
+#footer .fb .ft_info li a {
+    display: block;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.8rem;
+}
+
+#footer .fb .ft_info li~li::before {
+    content: "";
+    position: absolute;
+    left: -2.1rem;
+    top: 50%;
+
+    width: 2px;
+    height: 2px;
+    background: var(--white-color);
+
+    transform: translate(0, -50%);
+    border-radius: 50%;
+}
+
+#footer .fb .ft_add {
+    display: flex;
+    gap: 3rem;
+
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+
+    margin: 0 0 2.4rem 0;
+}
+
+#footer .fb .copy {
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: var(--line-color);
 }
