@@ -73,10 +73,9 @@ body {
     display: inline-block;
     width: 2rem;
     height: 2rem;
-    background: url(../images/btn_arrow_c.svg) no-repeat center center/contain;
+    background: url(../images/arrow-right-b.svg) no-repeat center center/contain;
     vertical-align: middle;
-    margin: 0 0 0 12px;
-    transform: rotate(15deg);
+    margin: -4px 0 0 12px;
 }
 
 .btn:hover::before {
@@ -91,11 +90,11 @@ body {
 }
 
 .btn.ws::after {
-    background: url(../images/btn_arrow.svg) no-repeat center center/contain;
+    background: url(../images/arrow-right-c.svg) no-repeat center center/contain;
 }
 
 .btn:hover::after {
-    background: url(../images/btn_arrow.svg) no-repeat center center/contain;
+    background: url(../images/arrow-right-c.svg) no-repeat center center/contain;
 }
 
 .scroll {
